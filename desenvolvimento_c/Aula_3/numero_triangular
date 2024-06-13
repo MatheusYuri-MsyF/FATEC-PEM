@@ -1,0 +1,26 @@
+//Dizemos que um número é triangular quando é a soma de 3 inteiros sucessivos: 6 = 1 + 2 + 3, 9 = 2 + 3 + 4.
+
+#include <stdio.h>
+
+int main() {
+    int num, i, soma = 0;
+
+    // Solicita ao usuário um número para verificar se é triangular
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &num);
+
+    // Verifica se o número é triangular
+    for (i = 1; soma < num; i++) {
+        soma += i;
+        // Se a soma for igual ao número, é triangular
+        if (soma == num) {
+            printf("%d e um numero triangular.\n", num);
+            return 0;
+        }
+    }
+    
+    // Se não for triangular
+    printf("%d nao e um numero triangular.\n", num);
+
+    return 0;
+}
